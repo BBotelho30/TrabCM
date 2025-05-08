@@ -39,11 +39,9 @@
     <string name="name">Nome</string>
     <string name="email">Email</string>
 
-    <string name="register_trip">Add trip</string>
-    <string name="share_trip">Share trip</string>
-
-
-
+    <string name="register_trip">Add Trip</string>
+    <string name="share_trip">Share Trip</string>
+    <string name="profile1">Profile</string>
 
 
 </resources>

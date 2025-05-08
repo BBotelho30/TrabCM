@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/person1"
+        android:title="@string/profile1" />
+    <item
+        android:id="@+id/nav_add"
+        android:icon="@drawable/add"
+        android:title="@string/register_trip" />
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/share"
+        android:title="@string/share_trip" />
 </menu>
