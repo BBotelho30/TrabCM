@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
 
@@ -15,6 +16,19 @@ class HomeActivity : AppCompatActivity() {
         profileButton.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
+        }
+
+
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
+
+        bottomNav.setOnNavigationItemSelectedListener { item ->
+            if (item.itemId == R.id.nav_profile) {
+                val intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
+                true
+            } else {
+                false
+            }
         }
     }
 }

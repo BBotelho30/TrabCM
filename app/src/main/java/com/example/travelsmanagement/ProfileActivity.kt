@@ -27,6 +27,7 @@ class ProfileActivity : AppCompatActivity() {
     private var selectedImageUri: Uri? = null
     private var isEditing = false
 
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +61,7 @@ class ProfileActivity : AppCompatActivity() {
 
 
         setEditingEnabled(false)
+
 
         actionButton.setOnClickListener {
             if (!isEditing) {
