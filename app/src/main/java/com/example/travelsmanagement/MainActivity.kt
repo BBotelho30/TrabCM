@@ -10,30 +10,58 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var viewPager: ViewPager2
     private lateinit var btnNext: Button
-    private lateinit var slides: List<SlideItem>
+
+    private lateinit var slideItems: List<SlideItem>
+    private lateinit var adapter: SlideAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        slides = listOf(
-            SlideItem("Acompanhe as suas Viagens", "Organize as suas viagens facilmente!", R.drawable.imagem1),
-            SlideItem("Adiciona sítios para visitar", "Incluindo restaurantes, museus, etc!", R.drawable.imagem2),
-            SlideItem("Partilhe com os seus Amigos", "Deixe os outros ver as suas viagens!", R.drawable.imagem3)
-        )
+        setContentView(R.layout.activity_main)
 
         viewPager = findViewById(R.id.viewPager)
         btnNext = findViewById(R.id.btnNext)
 
-        viewPager.adapter = SlideAdapter(slides)
+        slideItems = listOf(
+            SlideItem(
+                title = getString(R.string.slide1_title),
+                description = getString(R.string.slide1_desc),
+                imageResId = R.drawable.imagem1
+            ),
+            SlideItem(
+                title = getString(R.string.slide2_title),
+                description = getString(R.string.slide2_desc),
+                imageResId = R.drawable.imagem2
+            ),
+            SlideItem(
+                title = getString(R.string.slide3_title),
+                description = getString(R.string.slide3_desc),
+                imageResId = R.drawable.imagem3
+            )
+        )
+
+        adapter = SlideAdapter(slideItems)
+        viewPager.adapter = adapter
 
         btnNext.setOnClickListener {
-            if (viewPager.currentItem + 1 < slides.size) {
+            if (viewPager.currentItem < adapter.itemCount - 1) {
                 viewPager.currentItem += 1
             } else {
-                startActivity(Intent(this, MainActivity::class.java))
+
+                // Ir para o login
+                startActivity(Intent(this, LoginActivity::class.java))
                 finish()
             }
         }
+
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                btnNext.text = if (position == adapter.itemCount - 1) {
+                    getString(R.string.start)
+                } else {
+                    getString(R.string.next)
+                }
+            }
+        })
     }
 }

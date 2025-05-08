@@ -11,9 +11,9 @@ class SlideAdapter(private val slides: List<SlideItem>) :
     RecyclerView.Adapter<SlideAdapter.SlideViewHolder>() {
 
     inner class SlideViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val img = view.findViewById<ImageView>(R.id.imageView)
-        val title = view.findViewById<TextView>(R.id.textTitle)
-        val desc = view.findViewById<TextView>(R.id.textDescription)
+        val image: ImageView = view.findViewById(R.id.imageSlide)
+        val title: TextView = view.findViewById(R.id.titleSlide)
+        val description: TextView = view.findViewById(R.id.descriptionSlide)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SlideViewHolder {
@@ -22,10 +22,10 @@ class SlideAdapter(private val slides: List<SlideItem>) :
     }
 
     override fun onBindViewHolder(holder: SlideViewHolder, position: Int) {
-        val slide = slides[position]
-        holder.title.text = slide.title
-        holder.desc.text = slide.description
-        holder.img.setImageResource(slide.imageResId)
+        val item = slides[position]
+        holder.title.text = item.title
+        holder.description.text = item.description
+        holder.image.setImageResource(item.imageResId)
     }
 
     override fun getItemCount(): Int = slides.size

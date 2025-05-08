@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">App de Viagens</string>
+
+    <string name="slide1_title">Regista as tuas viagens</string>
+    <string name="slide1_desc">Organiza facilmente as tuas viagens!</string>
+
+    <string name="slide2_title">Adiciona locais a visitar</string>
+    <string name="slide2_desc">Inclui restaurantes, museus, etc!</string>
+
+    <string name="slide3_title">Partilha com os teus amigos</string>
+    <string name="slide3_desc">Deixa-os ver as tuas viagens!</string>
+
+    <string name="next">Seguinte</string>
+    <string name="start">Começar</string>
+
+    <string name="register_button">Começar</string>
+    <string name="login_title">Iniciar Sessão</string>
+    <string name="register_title">Regista-te</string>
+    <string name="login_button">Entrar</string>
+    <string name="nameInput">Nome</string>
+    <string name="password">Palavra-passe</string>
+    <string name="no_account">Não tem conta? Criar conta</string>
+    <string name="register_success">Registo concluído com sucesso!</string>
+    <string name="login_success">Login bem-sucedido!</string>
+    <string name="fill_all_fields">Preencha todos os campos.</string>
+    <string name="invalid_credentials">Credenciais inválidas.</string>
+    <string name="profile"></string>
+    <string name="welcome"></string>
+    <string name="my_trips">Viajar+</string>
+    <string name="no_trips">As minhas mensagens</string>
+    <string name="subtitle_text">As minhas mensagens</string>
+    <string name="data_updated">Dados atualizados com sucesso</string>
+    <string name="button_edit">Editar</string>
+
+
+    <string name="edit">Editar</string>
+    <string name="save">Guardar</string>
+    <string name="back">Voltar</string>
+    <string name="profile_image">Imagem de perfil</string>
+    <string name="name">Nome</string>
+    <string name="email">Email</string>
+
+    <string name="register_trip">Registar trip</string>
+    <string name="share_trip">Partilhar trip</string>
+
+
+
+
+
+</resources>
+
